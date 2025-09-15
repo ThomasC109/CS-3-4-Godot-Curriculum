@@ -61,9 +61,7 @@ position = Vector2(18, 17.5)
 
 [node name="Coin" parent="Tilemap/StuffOnTop" instance=ExtResource("5_tbgi4")]
 position = Vector2(-9.5, 26)
-goldAmount = null
-autoPickup = null
-coin_type = null
+goldAmount = 5
 
 [node name="Door" parent="Tilemap/StuffOnTop" instance=ExtResource("7_tipki")]
 position = Vector2(24, -24)
@@ -73,6 +71,8 @@ position = Vector2(-183.5, 105)
 
 [node name="Chest" parent="Tilemap/StuffOnTop" instance=ExtResource("6_tipki")]
 position = Vector2(150, 29)
+
+[node name="Area2D" type="Area2D" parent="Tilemap/StuffOnTop"]
 
 [node name="Player" parent="." instance=ExtResource("1_2j8vx")]
 
