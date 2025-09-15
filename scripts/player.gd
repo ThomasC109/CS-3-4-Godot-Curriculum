@@ -6,7 +6,8 @@ class_name Player
 
 # Movement - Controls how fast the player moves
 @export var move_speed: float = 200.0
-
+var money = 0
+var health = 50
 
 var facing: Vector2 = Vector2.ZERO
 
@@ -65,3 +66,9 @@ func handle_sprite(direction: Vector2) -> void:
 # - heal()
 # - level_up()
 # - attack()
+# - coin()
+func coin(int):
+	money += int
+
+func heal(int):
+	health += int
