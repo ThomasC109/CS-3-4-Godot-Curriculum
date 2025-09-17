@@ -20,8 +20,9 @@ func _input(event: InputEvent) -> void:
 		get_tree().quit(0)
 
 
-func _ready():
-	print("Player is ready!")
+func _process(delta):
+	print(money)
+	print(health)
 	# TODO: Add detailed character info display (Lesson 1)
 
 func _physics_process(delta):
@@ -61,14 +62,14 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
 
+func collect_pickup(type,label,value):
+	if type == "coin":
+		money += value
+	elif type == "potion":
+		health += value
 # TODO: Add character methods here (Lesson 2)
 # - take_damage()
 # - heal()
 # - level_up()
 # - attack()
 # - coin()
-func coin(int):
-	money += int
-
-func heal(int):
-	health += int

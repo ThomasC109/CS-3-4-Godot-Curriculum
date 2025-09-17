@@ -8,7 +8,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jig8b"]
 shader = ExtResource("2_wnlwo")
-shader_parameter/color = Color(0.7819218, 0.7083258, 0.2478461, 1)
+shader_parameter/color = Color(0, 0, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xmuha"]
 animations = [{
@@ -26,7 +26,7 @@ animations = [{
 "texture": null
 }],
 "loop": false,
-"name": &"new_animation",
+"name": &"disappear",
 "speed": 5.0
 }]
 
@@ -110,12 +110,11 @@ _data = {
 
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_d14el")
-color = Color(0.7819218, 0.7083258, 0.2478461, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_jig8b")
 sprite_frames = SubResource("SpriteFrames_xmuha")
-animation = &"new_animation"
+animation = &"disappear"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kfxoj")
