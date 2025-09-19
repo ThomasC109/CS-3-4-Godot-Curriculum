@@ -8,6 +8,7 @@ class_name Player
 @export var move_speed: float = 200.0
 var money = 0
 var health = 50
+var maxHealth = 50
 
 var facing: Vector2 = Vector2.ZERO
 
@@ -18,11 +19,6 @@ var facing: Vector2 = Vector2.ZERO
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit(0)
-
-
-func _process(delta):
-	print(money)
-	print(health)
 	# TODO: Add detailed character info display (Lesson 1)
 
 func _physics_process(delta):
@@ -66,7 +62,10 @@ func collect_pickup(type,label,value):
 	if type == "coin":
 		money += value
 	elif type == "potion":
-		health += value
+		if health + maxHealth > maxHealth:
+			health = maxHealth
+		else:
+			health += value
 # TODO: Add character methods here (Lesson 2)
 # - take_damage()
 # - heal()
