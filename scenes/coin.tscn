@@ -110,6 +110,7 @@ _data = {
 
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_d14el")
+color = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_jig8b")
@@ -124,3 +125,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_1nwoc")
 }
 speed_scale = 1.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
