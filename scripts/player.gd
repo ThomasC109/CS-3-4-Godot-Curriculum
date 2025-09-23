@@ -39,6 +39,8 @@ func handle_movement():
 	velocity = direction * move_speed
 	move_and_slide()
 
+func get_player_position():
+	return global_position
 # BAD QUICK CODE MAYBE CHANGE
 func handle_sprite(direction: Vector2) -> void:
 	var prefix: String = "walk"

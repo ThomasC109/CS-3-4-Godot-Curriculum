@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://cpcjxr26k8tgw"]
+[gd_scene load_steps=14 format=4 uid="uid://cpcjxr26k8tgw"]
 
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="3_fpihc"]
+[ext_resource type="Script" uid="uid://bdio7wk5n0quq" path="res://scripts/monster.gd" id="4_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://clkh0aurm6cru" path="res://scenes/spike.tscn" id="4_j0bf8"]
 [ext_resource type="PackedScene" uid="uid://hlj4dyfo1u8l" path="res://scenes/coin.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bqems63ld323y" path="res://scenes/health_potion.tscn" id="6_tefeu"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c6cn64y21oke7" path="res://scenes/torch.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c8mf4562xlcu8" path="res://scenes/door.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://5p2ev4o8h7si" path="res://scenes/lever.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cxbettagr323v" path="res://scenes/monster.tscn" id="11_ya4ey"]
 
 [sub_resource type="Environment" id="Environment_jyhfs"]
 background_energy_multiplier = 0.1
@@ -43,6 +45,11 @@ tile_set = ExtResource("3_fpihc")
 [node name="StuffOnTop" type="TileMapLayer" parent="Tilemap"]
 tile_map_data = PackedByteArray("AADv//3/AAAEAAYAAAAHAAYAAAAEAAYAAAAHAP3/AAAEAAYAAAAMAAIAAAAIAAYAAAAMAP7/AAAIAAYAAAAOAAUAAAAIAAYAAAD2/wYAAAAFAAYAAAAGAP7/AAAEAAcAAAD5//7/AAAEAAcAAAAFAPX/AAAHAAcAAAAFAPb/AAAIAAYAAAAEAPb/AAAIAAYAAAD+//X/AAAEAAYAAAA=")
 tile_set = ExtResource("3_fpihc")
+
+[node name="Monster" parent="Tilemap/StuffOnTop" instance=ExtResource("11_ya4ey")]
+position = Vector2(-78.5, 15.5)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_eb6dy")
 
 [node name="Torch3" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(-270, 98)
