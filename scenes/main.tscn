@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://cpcjxr26k8tgw"]
+[gd_scene load_steps=13 format=4 uid="uid://cpcjxr26k8tgw"]
 
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="1_2j8vx"]
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="2_3k9wy"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="3_fpihc"]
-[ext_resource type="Script" uid="uid://bdio7wk5n0quq" path="res://scripts/monster.gd" id="4_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://clkh0aurm6cru" path="res://scenes/spike.tscn" id="4_j0bf8"]
 [ext_resource type="PackedScene" uid="uid://hlj4dyfo1u8l" path="res://scenes/coin.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bqems63ld323y" path="res://scenes/health_potion.tscn" id="6_tefeu"]
@@ -47,9 +46,9 @@ tile_map_data = PackedByteArray("AADv//3/AAAEAAYAAAAHAAYAAAAEAAYAAAAHAP3/AAAEAAY
 tile_set = ExtResource("3_fpihc")
 
 [node name="Monster" parent="Tilemap/StuffOnTop" instance=ExtResource("11_ya4ey")]
-position = Vector2(-78.5, 15.5)
+position = Vector2(-256, 84)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("4_eb6dy")
+move_points = Array[Vector2]([Vector2(-260, 88), Vector2(-260, -4), Vector2(-124, -24), Vector2(-164, 64)])
 
 [node name="Torch3" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(-270, 98)
