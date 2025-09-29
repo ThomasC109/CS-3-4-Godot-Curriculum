@@ -46,9 +46,10 @@ tile_map_data = PackedByteArray("AADv//3/AAAEAAYAAAAHAAYAAAAEAAYAAAAHAP3/AAAEAAY
 tile_set = ExtResource("3_fpihc")
 
 [node name="Monster" parent="Tilemap/StuffOnTop" instance=ExtResource("11_ya4ey")]
-position = Vector2(-256, 84)
+position = Vector2(-160, 64)
 scale = Vector2(0.5, 0.5)
-move_points = Array[Vector2]([Vector2(-260, 88), Vector2(-260, -4), Vector2(-124, -24), Vector2(-164, 64)])
+is_hostile = true
+move_points = Array[Vector2]([Vector2(-260, 88), Vector2(-256, -20), Vector2(-128, -20), Vector2(-164, 64)])
 
 [node name="Torch3" parent="Tilemap/StuffOnTop" instance=ExtResource("7_o6xl0")]
 position = Vector2(-270, 98)
